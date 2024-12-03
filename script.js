@@ -14,11 +14,6 @@ function fibs(n) {
   return f;
 }
 
-console.log(fibs(0));
-console.log(fibs(1));
-console.log(fibs(2));
-console.log(fibs(8));
-
 // Recursive
 function fibsRec(n, i = 0, f = []) {
   if (n <= i) {
@@ -35,11 +30,6 @@ function fibsRec(n, i = 0, f = []) {
 
   return fibsRec(n, i + 1, f);
 }
-
-console.log(fibsRec(0));
-console.log(fibsRec(1));
-console.log(fibsRec(2));
-console.log(fibsRec(8));
 
 // Merge Sort
 function mergeSort(arr) {
@@ -60,8 +50,30 @@ function mergeSort(arr) {
   return arrFinal;
 }
 
-let arr = [
-  3, 55, 4, 18, 5, 0, 2, 1, 13, 8, 5, 0, 1, 2, 33, 2, 5, 4, 6, 3, 7, 0, 4, 23,
-  55, 5, 8, 9, 77, 4, 0, 2, 4, 8, 9, 22, 21, 34,
-];
-console.log(mergeSort(arr));
+// Testing
+console.log('Loop:');
+console.log(`fibs(0) => [${fibs(0)}]`);
+console.log(`fibs(1) => [${fibs(1)}]`);
+console.log(`fibs(2) => [${fibs(2)}]`);
+console.log(`fibs(8) => [${fibs(8)}]`);
+console.log();
+console.log('Recursive:');
+console.log(`fibsRec(0) => [${fibsRec(0)}]`);
+console.log(`fibsRec(1) => [${fibsRec(1)}]`);
+console.log(`fibsRec(2) => [${fibsRec(2)}]`);
+console.log(`fibsRec(8) => [${fibsRec(8)}]`);
+console.log();
+console.log('Merge Sort:');
+console.log(
+  `mergeSort([3, 2, 1, 13, 8, 5, 0, 1]) => [${mergeSort([
+    3, 2, 1, 13, 8, 5, 0, 1,
+  ])}]`
+);
+console.log(
+  `mergeSort([105, 79, 100, 110]) => [${mergeSort([105, 79, 100, 110])}]`
+);
+console.log(
+  `mergeSort([34, -2, 9, 0, 32, 7, 8, -25]) => [${mergeSort([
+    34, -2, 9, 0, 32, 7, 8, -25,
+  ])}]`
+);
